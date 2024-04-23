@@ -1,6 +1,7 @@
-package A9.Date21Apr24.LL1;
+package A10.Date21Apr24.LL1;
 
-public class InsertionInLL {
+
+public class IntersectionOfTwoLL {
 
 	Node head;
 	int count;
@@ -16,7 +17,7 @@ public class InsertionInLL {
 	}
 
 	public static void main(String[] args) {
-		InsertionInLL ll = new InsertionInLL();
+		IntersectionOfTwoLL ll = new IntersectionOfTwoLL();
 
 		ll.head = new Node(1);
 		Node sec = new Node(2);

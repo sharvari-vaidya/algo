@@ -1,6 +1,6 @@
-package A9.Date21Apr24.LL1;
+package A10.Date21Apr24.LL1;
 
-public class ReverseLL {
+public class DeletionFromLL {
 	Node head;
 
 	static class Node {
@@ -14,7 +14,7 @@ public class ReverseLL {
 	}
 
 	public static void main(String[] args) {
-		ReverseLL ll = new ReverseLL();
+		DeletionFromLL ll = new DeletionFromLL();
 		ll.head = new Node(0);
 		Node sec = new Node(1);
 		Node third = new Node(2);
@@ -25,33 +25,41 @@ public class ReverseLL {
 		third.next = fourth;
 		fourth.next = fifth;
 		ll.printAndfindLength();
-		ll.reverseLL();
+		int pos = 2;
+		ll.deleteNode(pos);
 		ll.printAndfindLength();
-
 	}
 
-	private void reverseLL() {
-
-		Node curr = head;
-		Node pre = null;
-		Node nex = null;
-
-		while (curr != null) {
-			nex = curr.next;
-			curr.next = pre;
-			pre = curr;
-			curr = nex;
-		}
-		head = pre;
-
-	}
-
-	private void printAndfindLength() {
+	private void deleteNode(int pos) {
 		Node n = head;
+		if (pos == 0) {
+			head = n.next;
+			n.next = null;
+		} else {
+			Node pre = head;
+			Node nex = head.next;
+			while (n.data != pos) {
+				pre = n;
+				nex = n.next;
+				n = n.next;
+
+			}
+			pre.next = nex.next;
+
+		}
+
+	}
+
+	public int printAndfindLength() {
+		Node n = head;
+		int co = 0;
 		while (n != null) {
+			co++;
 			System.out.println(n.data);
 			n = n.next;
 		}
 		System.out.println("***********");
+		return co;
 	}
+
 }
