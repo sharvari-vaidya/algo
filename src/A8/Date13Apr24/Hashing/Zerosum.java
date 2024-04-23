@@ -1,4 +1,4 @@
-package com.hashing;
+package A8.Date13Apr24.Hashing;
 
 import java.util.HashMap;
 import java.util.Map;
