@@ -1,4 +1,4 @@
-package A10.Date21Apr24.LL1;
+package A10.Date20Apr24.LL1;
 
 public class DeletionFromLL {
 	Node head;
