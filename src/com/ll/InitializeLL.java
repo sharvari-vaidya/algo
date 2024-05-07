@@ -1,4 +1,4 @@
-package A10.Date20Apr24.LL1;
+package com.ll;
 
 public class InitializeLL {
 	Node head;
